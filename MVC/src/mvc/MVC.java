@@ -5,6 +5,8 @@
  */
 package mvc;
 
+import modelo.persona;
+
 /**
  *
  * @author SISTEMAS CORP
@@ -16,6 +18,13 @@ public class MVC {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        persona kevin = new 
+        persona("kevin", "jimenez", 1785, 24, 
+                0, "la 41", 'm', true);
+        persona orlando = new persona("kevin", "jimenez", 0, 0, 0, "la 41", 'm', true);
+        persona jimenez = new persona("kevin", "jimenez", 0, 0, 0, "la 41", 'm', true);
+        System.out.println(kevin);
+        
     }
     
 }
