@@ -101,7 +101,8 @@ public class persona {
     
     @Override
     public String toString() {
-        return "nombre:" + this.getNombre();
+        return 
+     "nombre:" + this.getNombre();
     }
     
     
