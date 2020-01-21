@@ -6,5 +6,24 @@
 
 ###### titulo 6 <h6>
 
-kevin jimenez 24 95
+*kevin* **jimenez** __24__ ~~95~~ *__jimenez__*
+
+### listas no ordenada
+
+- *kevin*
+* jimenez
++ **orlando**
+
+### listas ordenada
+1. *kk*
+2. **kk**
+3. kk
+
+
+KEVIN [HOLA](http://itq.edu.ec/)
+
+![GOOGLE](https://androidayuda.com/app/uploads-androidayuda.com/2016/10/Google-Logo.jpg)
+
+
+
 
