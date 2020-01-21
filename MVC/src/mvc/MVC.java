@@ -26,7 +26,7 @@ public class MVC {
                 "222222", "la 41", 'm', true);
         persona orlando = new persona("kevin", "jimenez", "0", 0, "0", "la 41", 'm', true);
         persona jimenez = new persona("kevin", "jimenez", "0", 0, "0", "la 41", 'm', true);
-        System.out.println(kevin);
+        //System.out.println(kevin);
         
         inicio.menu();
         
