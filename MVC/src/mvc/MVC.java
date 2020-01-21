@@ -6,6 +6,7 @@
 package mvc;
 
 import modelo.persona;
+import vista.usuario;
 
 /**
  *
@@ -17,6 +18,7 @@ public class MVC {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        usuario inicio = new usuario();
         // TODO code application logic here
         persona kevin = new 
         persona("kevin", "jimenez", "17222222", 
@@ -25,6 +27,8 @@ public class MVC {
         persona orlando = new persona("kevin", "jimenez", "0", 0, "0", "la 41", 'm', true);
         persona jimenez = new persona("kevin", "jimenez", "0", 0, "0", "la 41", 'm', true);
         System.out.println(kevin);
+        
+        inicio.menu();
         
     }
     

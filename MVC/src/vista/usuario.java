@@ -13,28 +13,27 @@ import javax.swing.JOptionPane;
  * @author SISTEMAS CORP
  */
 public class usuario {
-    
-    public void menu(){
-        
+
+    public void menu() {
+        user metodos = new user();
         int opcion = 0;
-        opcion =  Integer.parseInt(JOptionPane
-                .showInputDialog(null, "MENU \n"+
-                        "1. Agregar Persona \n" +
-                        "2. Listar Persona \n"
-                        , this)); 
-        
-        switch(opcion){
-            case 1:
-                user metodos = new user();
+        opcion = Integer.parseInt(JOptionPane
+                .showInputDialog(null, "MENU \n"
+                        + "1. Agregar Persona \n"
+                        + "2. Listar Persona \n",
+                         this));
+
+        switch (opcion) {
+            case 1:                
                 metodos.agregarPersona("Kevin");
                 break;
-                case 2:
-                    break;
-                    default:
-                        break;
+            case 2:
+                metodos.listaPersonas();
+                break;
+            default:
+                break;
         }
-        
-        
+
     }
-     
+
 }

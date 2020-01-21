@@ -25,6 +25,15 @@ public class user {
                 + nombre;
     }
     
+    public String listaPersonas(){
+        String lista = "";           
+        for (int i = 0; i < listaPersonas.size(); i++) {
+            System.out.println(listaPersonas.get(i));
+            lista += listaPersonas.get(i).toString() + "\n";
+        }                
+        return lista;
+    }
+    
     
     
     
