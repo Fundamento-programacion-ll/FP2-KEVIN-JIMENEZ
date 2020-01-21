@@ -5,10 +5,27 @@
  */
 package controlador;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author SISTEMAS CORP
  */
 public class user {
+    
+    ArrayList listaPersonas = 
+            new ArrayList<String>();
+    
+    public String agregarPersona(
+    String nombre
+    ){
+        listaPersonas.add(nombre);
+        
+        return "Persona agregada correctamente," 
+                + nombre;
+    }
+    
+    
+    
     
 }

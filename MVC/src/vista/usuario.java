@@ -5,10 +5,36 @@
  */
 package vista;
 
+import controlador.user;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author SISTEMAS CORP
  */
 public class usuario {
     
+    public void menu(){
+        
+        int opcion = 0;
+        opcion =  Integer.parseInt(JOptionPane
+                .showInputDialog(null, "MENU \n"+
+                        "1. Agregar Persona \n" +
+                        "2. Listar Persona \n"
+                        , this)); 
+        
+        switch(opcion){
+            case 1:
+                user metodos = new user();
+                metodos.agregarPersona("Kevin");
+                break;
+                case 2:
+                    break;
+                    default:
+                        break;
+        }
+        
+        
+    }
+     
 }
