@@ -43,3 +43,19 @@ var a = 'hola'
 │ 24 │ kevin │
 │ 24 │ kevin │
 │ 24 │ kevin │
+
+# lineas
+
+---
+***
+___
+
+# videos
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=QF9q_YRxTS4" target="_blank">
+<img
+src="http://img.youtube.com/vi/QF9q_YRxTS4/0.jpg"
+></img>
+</a>
+
+[![imagen videos](http://img.youtube.com/vi/QF9q_YRxTS4/0.jpg)](http://www.youtube.com/watch?feature=player_embedded&v=QF9q_YRxTS4)
