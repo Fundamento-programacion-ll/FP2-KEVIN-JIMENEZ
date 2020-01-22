@@ -25,5 +25,21 @@ KEVIN [HOLA](http://itq.edu.ec/)
 ![GOOGLE](https://androidayuda.com/app/uploads-androidayuda.com/2016/10/Google-Logo.jpg)
 
 
+## codigo
 
+```
+$ npm i -g @nestjs/cli
+$ nest new project-name
+```
 
+```java
+var a = 'hola'
+```
+
+# tablas
+
+│ edad │nombre│
+│------│------│
+│ 24 │ kevin │
+│ 24 │ kevin │
+│ 24 │ kevin │
