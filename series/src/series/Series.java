@@ -19,7 +19,7 @@ public class Series {
     public static void main(String[] args) {
         // TODO code application logic here        
         serie instanciaSerie = new serie();
-        int numeroIngreado;
+        int numeroIngreado = 0;
         Scanner numeroUno = new Scanner(System.in);
         System.out.println("Ingrese un numero");
         numeroIngreado = numeroUno.nextInt();

@@ -52,6 +52,10 @@ public class vector {
         
         
     }
+    
+    //nuemroPrimo()
+    
+    //esPrimo() true false
 
     @Override
     public String toString() {
