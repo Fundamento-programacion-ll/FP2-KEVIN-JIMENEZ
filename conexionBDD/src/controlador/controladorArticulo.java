@@ -9,6 +9,7 @@ import conexion.conector;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -91,6 +92,18 @@ public class controladorArticulo {
                     System.out.println("precio: "+rs.getFloat(4));
                 }
         }
+    }
+        
+        
+    public ArrayList obtenerDatos() throws SQLException{
+        ArrayList<String> listaNombres = new ArrayList<>();
+        String selectDatos = "select * from articulos";
+        ps = conexion.getConxion().prepareStatement(selectDatos);
+        rs = ps.executeQuery();
+        while (rs.next()) {                        
+            listaNombres.add(rs.getString(2));
+        }
+        return listaNombres;
     }
     
 }
