@@ -96,12 +96,16 @@ public class controladorArticulo {
         
         
     public ArrayList obtenerDatos() throws SQLException{
-        ArrayList<String> listaNombres = new ArrayList<>();
+        ArrayList<articulo> listaNombres = new ArrayList<>();        
         String selectDatos = "select * from articulos";
         ps = conexion.getConxion().prepareStatement(selectDatos);
-        rs = ps.executeQuery();
-        while (rs.next()) {                        
-            listaNombres.add(rs.getString(2));
+        rs = ps.executeQuery();        
+        while (rs.next()) {            
+            articulo art = new articulo();
+            art.setNombre(rs.getString(2));
+            art.setDescripcion(rs.getString(3));
+            art.setPrecio(rs.getInt(4));
+            listaNombres.add(art);
         }
         return listaNombres;
     }

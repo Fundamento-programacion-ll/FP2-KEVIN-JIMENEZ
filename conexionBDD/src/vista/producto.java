@@ -24,26 +24,31 @@ public class producto extends javax.swing.JFrame {
     articulo nuevoArticulo = 
                 new articulo();
     controladorArticulo articuloControlador = 
-                new controladorArticulo();        
+                new controladorArticulo(); 
+    ArrayList<articulo> listaNombres = null;
     
     public producto() {
         initComponents();           
         cbRegistros.addItem("asdasd");
-        cbRegistros.addItem("OPCION NUEVA");
-        ArrayList<String> listaNombres;
+        cbRegistros.addItem("OPCION NUEVA");        
         try {
             System.out.println("Imprimir Lista");
             listaNombres = articuloControlador.obtenerDatos();
-            for (String nombre : listaNombres) {
-            System.out.println(nombre);
-            cbRegistros.addItem(nombre);
-        }
+            for (articulo art : listaNombres) {            
+            cbRegistros.addItem(art.getNombre());
+        }            
         } catch (SQLException ex) {
             Logger.getLogger(producto.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         
     }
+    
+    public void itemSeleccionado(String nombre){
+                      
+    }
+    
+   
     
 
     /**
@@ -140,6 +145,16 @@ public class producto extends javax.swing.JFrame {
         });
 
         cbRegistros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbRegistros.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cbRegistrosItemStateChanged(evt);
+            }
+        });
+        cbRegistros.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cbRegistrosMouseClicked(evt);
+            }
+        });
         cbRegistros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbRegistrosActionPerformed(evt);
@@ -160,8 +175,8 @@ public class producto extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cbRegistros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(77, Short.MAX_VALUE))
+                        .addComponent(cbRegistros, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,6 +220,33 @@ public class producto extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_cbRegistrosActionPerformed
+
+    private void cbRegistrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbRegistrosMouseClicked
+        // TODO add your handling code here:
+                
+    }//GEN-LAST:event_cbRegistrosMouseClicked
+
+    private void cbRegistrosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbRegistrosItemStateChanged
+        // TODO add your handling code here:                               
+        if (evt.getStateChange() == 1) {
+            System.out.println(evt.getItem().toString());
+            try {
+                listaNombres = articuloControlador.obtenerDatos();
+                for (articulo art : listaNombres) {
+                    if (art.getNombre().equals(evt.getItem().toString())) {
+                        txtFieldNombre.setText(art.getNombre());
+                        txtAreaDescripcion.setText(art.getDescripcion());
+                        txtFieldPrecio.setText(String.valueOf(art.getPrecio()));
+                    }                    
+                }                
+                        
+                
+            } catch (SQLException ex) {
+                Logger.getLogger(producto.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
+    }//GEN-LAST:event_cbRegistrosItemStateChanged
 
     /**
      * @param args the command line arguments
