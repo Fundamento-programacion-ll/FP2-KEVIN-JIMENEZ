@@ -27,7 +27,7 @@ public class circulo extends punto{
     
     public void dibujo(Graphics g){
         g.setColor(Color.BLUE);
-        g.drawOval(super.getX(), super.getY(), this.radio, this.radio);
+             g.drawOval(super.getX(), super.getY(), this.radio, this.radio);
         
     }
 
