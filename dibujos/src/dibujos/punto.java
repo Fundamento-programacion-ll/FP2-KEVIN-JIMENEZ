@@ -18,8 +18,7 @@ public class punto extends figura{
     private  int x;
     private  int y;
 
-    public punto() {
-        super();
+    public punto() {        
         String datos = JOptionPane.showInputDialog(null, "Ingrese los valores del punto separados por coma");
         StringTokenizer tokens = new StringTokenizer(datos, ",");               
         this.x = Integer.parseInt(tokens.nextToken());
@@ -49,7 +48,9 @@ public class punto extends figura{
     }
     
     @Override
-    public void dibujo(Graphics g) {             
+    public void dibujo(Graphics g) {                  
+        g.setColor(Color.RED);        
+        g.fillOval(this.x, this.y, 20, 20);
     }
 
 

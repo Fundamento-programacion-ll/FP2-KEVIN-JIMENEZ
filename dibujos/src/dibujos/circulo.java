@@ -5,6 +5,7 @@
  */
 package dibujos;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 /**
@@ -16,7 +17,7 @@ public class circulo extends punto{
     private int radio;
 
     public circulo() {
-        
+        super();
     }
 
     public circulo(int radio, int x, int y) {
@@ -25,6 +26,8 @@ public class circulo extends punto{
     }
     
     public void dibujo(Graphics g){
+        g.setColor(Color.BLUE);
+        g.drawOval(super.getX(), super.getY(), this.radio, this.radio);
         
     }
 
@@ -35,6 +38,12 @@ public class circulo extends punto{
     public void setRadio(int radio) {
         this.radio = radio;
     }
+
+    @Override
+    public String toString() {
+        return super.toString(); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
     
     
