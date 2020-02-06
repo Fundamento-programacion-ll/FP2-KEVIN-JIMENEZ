@@ -14,21 +14,25 @@ import javax.swing.JOptionPane;
  *
  * @author SISTEMAS CORP
  */
-public class punto extends figura{
-    private  int x;
-    private  int y;
+public class punto extends figura {
 
-    public punto() {        
-        String datos = JOptionPane.showInputDialog(null, "Ingrese los valores del punto separados por coma");
-        StringTokenizer tokens = new StringTokenizer(datos, ",");               
+    private int x;
+    private int y;
+
+    public punto() {
+        super();
+        String datos;
+        datos = JOptionPane.showInputDialog("ingrese las coordenadas x,y separados con coma");
+        StringTokenizer tokens = new StringTokenizer(datos, ",");
+
         this.x = Integer.parseInt(tokens.nextToken());
-        this.y = Integer.parseInt(tokens.nextToken());                
-   }
-   
+        this.y = Integer.parseInt(tokens.nextToken());
+    }
+
     public punto(int x, int y) {
         super();
         this.x = x;
-        this.y = y;        
+        this.y = y;
     }
 
     public int getX() {
@@ -46,19 +50,35 @@ public class punto extends figura{
     public void setY(int y) {
         this.y = y;
     }
-    
+
     @Override
-    public void dibujo(Graphics g) {                  
-        g.setColor(Color.RED);        
-        g.fillOval(this.x, this.y, 20, 20);
+    public void paint(Graphics g) {
+        // TODO Auto-generated method stub
+        g.setColor(Color.RED);
+        g.fillOval(this.x, this.y, 30, 30);
+
     }
 
+    @Override
+    public double getArea() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public double getPerimetro() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public double getVolumen() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 
     @Override
     public String toString() {
-        return "puntos: [ x = "+this.x+", y = "+this.y+" ]";
+        return "\nPunto [x= " + this.x + ", y= " + this.y + ']';
     }
-    
-    
-    
 }
