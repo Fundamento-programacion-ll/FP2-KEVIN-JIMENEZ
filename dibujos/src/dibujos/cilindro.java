@@ -35,27 +35,27 @@ public class cilindro extends circulo {
         this.altura = Double.parseDouble(JOptionPane.showInputDialog("ingrese la altura del cilindro"));
     }
 
-    public double getArea() {
-
-        return 2 * super.getArea() + this.getCircunferencia() * this.altura;
-
-    }
-
-    public double getVolumen() {
-        return super.getArea() * this.altura;
-
-    }
+//    public double getArea() {
+//
+//        return 2 * super.getArea() + this.getCircunferencia() * this.altura;
+//
+//    }
+//
+//    public double getVolumen() {
+//        return super.getArea() * this.altura;
+//
+//    }
 
     public void paint(Graphics g) {
-        super.paint(g);
-        
-        g.setColor(Color.GREEN);
-
-        g.fillOval(getX(), (int) (getY() + this.altura), (int) super.getRadio(), (int) super.getRadio());
-
-        g.setColor(Color.GREEN);
-        g.drawLine((int) (super.getX() + super.getRadio()), (int) (super.getY() + (super.getRadio() / 2)), (int) (super.getX() + super.getRadio()), (int) (super.getY() + this.altura + super.getRadio() - (super.getRadio() / 2)));
-        g.drawLine((int) (getX()), (int) (super.getY() + (super.getRadio() / 2)), (int) (super.getX()), (int) (super.getY() + this.altura + super.getRadio() - (super.getRadio() / 2)));
+//        super.paint(g);
+//        
+//        g.setColor(Color.GREEN);
+//
+//        g.fillOval(getX(), (int) (getY() + this.altura), (int) super.getRadio(), (int) super.getRadio());
+//
+//        g.setColor(Color.GREEN);
+//        g.drawLine((int) (super.getX() + super.getRadio()), (int) (super.getY() + (super.getRadio() / 2)), (int) (super.getX() + super.getRadio()), (int) (super.getY() + this.altura + super.getRadio() - (super.getRadio() / 2)));
+//        g.drawLine((int) (getX()), (int) (super.getY() + (super.getRadio() / 2)), (int) (super.getX()), (int) (super.getY() + this.altura + super.getRadio() - (super.getRadio() / 2)));
 
     }
 

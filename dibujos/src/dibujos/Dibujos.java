@@ -14,36 +14,39 @@ import javax.swing.JOptionPane;
  *
  * @author SISTEMAS CORP
  */
-public class Dibujos extends Canvas{
+public class Dibujos {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {                       
+    public static void main(String[] args) {
         // TODO code application logic here
-        
-        //menu();
-        
-        punto pto = new punto();
-        circulo circle = new circulo();
-        cilindro cili = new cilindro();
+
+        menu();
+
+//        punto pto = new punto();
+//        circulo circle = new circulo();
+//        cilindro cili = new cilindro();
+    }
+
+    public static void menu() {
         JFrame ventana = new JFrame();
-        ventana.add(cili);
-        ventana.setSize(700,400);
-        ventana.setVisible(true);
-        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+        String input = JOptionPane.showInputDialog(null, "Ingreser la opcion a dibujar: punto, circulo");
+        if (input.equalsIgnoreCase("punto")) {
+            punto pto = new punto();
+            
+            ventana.add(pto);
+            ventana.setSize(700, 400);
+            ventana.setVisible(true);
+            ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        } else if (input.equalsIgnoreCase("circulo")) {
+            circulo circle = new circulo();
+            ventana.add(circle);
+            ventana.setSize(700, 400);
+            ventana.setVisible(true);
+            ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Opcion no encontrada");
+        }
     }
-    
-    
-public static void menu(){
-    String input = JOptionPane.showInputDialog(null, "Ingreser la opcion a dibujar: punto, circulo");
-    if (input.equalsIgnoreCase("punto")) {
-        punto pto= new punto();
-    } else if(input.equalsIgnoreCase("circulo")){
-        circulo circle = new circulo();
-    } else {
-        JOptionPane.showMessageDialog(null, "Opcion no encontrada");
-    }
-}
 }

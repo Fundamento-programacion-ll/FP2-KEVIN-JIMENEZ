@@ -58,25 +58,7 @@ public class punto extends figura {
         g.fillOval(this.x, this.y, 30, 30);
 
     }
-
-    @Override
-    public double getArea() {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
-    @Override
-    public double getPerimetro() {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
-    @Override
-    public double getVolumen() {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
+    
     @Override
     public String toString() {
         return "\nPunto [x= " + this.x + ", y= " + this.y + ']';
