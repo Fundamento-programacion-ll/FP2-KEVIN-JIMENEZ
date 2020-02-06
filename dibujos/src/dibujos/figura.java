@@ -18,7 +18,7 @@ public abstract class figura extends Canvas {
 
 //    public abstract double getVolumen();
     
-//    public abstract double getArea();
+    public abstract double getArea();
 //
 //    public abstract double getPerimetro();
 

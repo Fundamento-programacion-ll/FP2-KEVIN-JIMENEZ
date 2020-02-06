@@ -41,11 +41,17 @@ public class Dibujos {
             ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         } else if (input.equalsIgnoreCase("circulo")) {
             circulo circle = new circulo();
+            System.out.println(circle);
             ventana.add(circle);
             ventana.setSize(700, 400);
             ventana.setVisible(true);
             ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         } else {
+            cilindro cilind = new cilindro();
+            ventana.add(cilind);
+            ventana.setSize(700, 400);
+            ventana.setVisible(true);
+            ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             JOptionPane.showMessageDialog(null, "Opcion no encontrada");
         }
     }

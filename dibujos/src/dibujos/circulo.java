@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  * @author SISTEMAS CORP
  */
 public class circulo extends punto {
-
+    static final double PI = 3.1416;
     private double radio;
 
     public circulo(int x, int y, double radio) {
@@ -54,16 +54,18 @@ public class circulo extends punto {
     }
 
     public double getArea() {
-        return Math.PI * getRadio() * getRadio();
+        return PI * getRadio() * getRadio();
     }
 
     public double getVolumen() {
         return 0.0;
     }
+    
+    
 
     @Override
     public String toString() {
-        return "\n Circulo" + super.toString() + " \n Radio= " + this.radio;
+        return "\n Circulo" + super.toString() + " \n Radio= " + this.radio+" area "+this.getArea();
     }
 
 }

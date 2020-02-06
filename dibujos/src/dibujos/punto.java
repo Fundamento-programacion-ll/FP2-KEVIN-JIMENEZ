@@ -63,4 +63,9 @@ public class punto extends figura {
     public String toString() {
         return "\nPunto [x= " + this.x + ", y= " + this.y + ']';
     }
+
+    @Override
+    public double getArea() {
+        return 0;
+    }
 }
