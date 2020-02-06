@@ -5,6 +5,7 @@
  */
 package dibujos;
 
+import java.awt.Canvas;
 import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -13,7 +14,7 @@ import javax.swing.JOptionPane;
  *
  * @author SISTEMAS CORP
  */
-public class Dibujos {
+public class Dibujos extends Canvas{
 
     /**
      * @param args the command line arguments
@@ -21,14 +22,16 @@ public class Dibujos {
     public static void main(String[] args) {                       
         // TODO code application logic here
         
-        menu();
+        //menu();
         
-//        punto pto = new punto();
-//        JFrame ventana = new JFrame();
-//        ventana.add(pto);
-//        ventana.setSize(700,400);
-//        ventana.setVisible(true);
-//        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        punto pto = new punto();
+        circulo circle = new circulo();
+        cilindro cili = new cilindro();
+        JFrame ventana = new JFrame();
+        ventana.add(cili);
+        ventana.setSize(700,400);
+        ventana.setVisible(true);
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
     }
     
