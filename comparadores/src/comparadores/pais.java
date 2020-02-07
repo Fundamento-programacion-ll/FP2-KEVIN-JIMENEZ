@@ -7,6 +7,7 @@ package comparadores;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import javax.swing.JOptionPane;
 
 /**
@@ -46,10 +47,16 @@ public class pais {
     public void agregarProvincia(provincias provincia){
         this.listaProvincias.add(provincia);
     }
+    
+    
+    public void ordenarPorNombreProvincia(){
+        // ordenar la lista de objetos por el nombre
+        Collections.sort(listaProvincias, new comparador());
+    }
 
     @Override
     public String toString() {
-        return ""+this.listaProvincias.toString() + "";
+        return "Lista provincias \n"+listaProvincias;
     }
     
     

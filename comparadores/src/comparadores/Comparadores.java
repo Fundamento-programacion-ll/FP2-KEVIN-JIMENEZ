@@ -16,10 +16,15 @@ public class Comparadores {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        String salida="";
         pais p  = new pais();
         p.setListaProvincias();
-        System.out.println(p);
+        salida += "Lista Provincias: \n"+p.toString();
+        System.out.println(salida);
+        
+        p.ordenarPorNombreProvincia();
+        salida += "Lista Provincias: \n"+p.toString();
+        System.out.println(salida);
     }
     
 }
