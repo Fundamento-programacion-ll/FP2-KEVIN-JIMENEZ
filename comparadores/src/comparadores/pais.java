@@ -53,6 +53,12 @@ public class pais {
         // ordenar la lista de objetos por el nombre
         Collections.sort(listaProvincias, new comparador());
     }
+    
+    public void ordenarPorNumero(){
+        // ordenar la lista de objetos por el nombre
+        Collections.sort(listaProvincias, new comparadorHabitantes());
+    }
+    
 
     @Override
     public String toString() {
