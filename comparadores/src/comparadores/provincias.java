@@ -48,6 +48,13 @@ public class provincias {
     public void setNumeroHabitantes(int numeroHabitantes) {
         this.numeroHabitantes = numeroHabitantes;
     }
+
+    @Override
+    public String toString() {
+        return "";
+    }
+    
+    
     
     
     
