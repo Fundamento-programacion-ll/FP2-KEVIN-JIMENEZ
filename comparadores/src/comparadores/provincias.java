@@ -17,8 +17,7 @@ public class provincias {
     private int numeroHabitantes;
 
     public provincias() {
-        String datos;
-        
+        String datos;        
         datos = JOptionPane.showInputDialog(null, "Ingrese los datos separados por punto y coma");
         StringTokenizer  tokens = new StringTokenizer(datos,";");
         this.nombreProvincia = tokens.nextToken();
